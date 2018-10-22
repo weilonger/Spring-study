@@ -1,0 +1,44 @@
+#spring:
+#  profiles:
+#    active: dev
+#
+#---
+#server:
+#  port: 8080
+#  servlet:
+#    path: /weilong
+#spring:
+#  profiles: dev
+#
+#person:
+#  lastname: 郑麒麟
+#  age: 250
+#  boss: true
+#  birth: 1800/11/7
+#  maps: {key1: value1, key2: value2}
+#  list: [apple, orange, banana]
+#  type: 水果
+#  size: 100
+#  fruit:
+#    name: ${person.type}
+#    size: ${random.int}
+#---
+#server:
+#  port: 8081
+#  servlet:
+#    path: /weilong
+#spring:
+#  profiles: pro
+
+person:
+  lastname: 郑麒麟
+  age: 250
+  boss: true
+  birth: 1800/11/7
+  maps: {key1: value1, key2: value2}
+  list: [apple, orange, banana]
+  type: 水果
+  size: 100
+  fruit:
+    name: ${person.type}
+    size: ${random.int}
