@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <span th:text="${hello}"></span>
+    <!--<ul>-->
+        <!--<li>-->
+            <!--<span>id</span>-->
+            <!--<span>username</span>-->
+            <!--<span>password</span>-->
+            <!--<span>birth</span>-->
+            <!--<span>format_birth</span>-->
+        <!--</li>-->
+        <!--<li  th:each="s:${student}">-->
+            <!--<span th:text="${s.id}"></span>-->
+            <!--<span th:text="${s.username.concat(s.id)}"></span>-->
+            <!--<span th:text="${s.password}"></span>-->
+            <!--<span th:text="${s.birth}"></span>-->
+            <!--<span th:text="${#calendars.format(s.birth,'yyyy-MM-dd')}"></span>-->
+        <!--</li>-->
+    <!--</ul>-->
+
+    <table class="table table-striped">
+        <tr>
+            <th>id</th>
+            <th>名字</th>
+            <th>密码</th>
+            <th>生日</th>
+            <th>生日format</th>
+        </tr>
+        <tr  th:each="ss : ${student}" >
+            <td th:text="${ss.id}"></td>
+            <td th:text="${ss.username}"></td>
+            <th th:text="${ss.password}"></th>
+            <th th:text="${ss.birth}"></th>
+            <th th:text="${#calendars.format(ss.birth,'yyyy-MM-dd')}"></th>
+        </tr>
+    </table>
+
+</body>
+</html>

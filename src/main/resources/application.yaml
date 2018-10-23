@@ -10,7 +10,7 @@
 #spring:
 #  profiles: dev
 #
-#person:
+#User:
 #  lastname: 郑麒麟
 #  age: 250
 #  boss: true
@@ -20,7 +20,7 @@
 #  type: 水果
 #  size: 100
 #  fruit:
-#    name: ${person.type}
+#    name: ${User.type}
 #    size: ${random.int}
 #---
 #server:
